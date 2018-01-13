@@ -18,49 +18,49 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement(name = "xml")
 public class TextMessageResponce {
-    private String toUserName;
-    private String fromUserName;
-    private Long createTime;
-    private String msgType;
-    private String content;
+    private String ToUserName;
+    private String FromUserName;
+    private Long CreateTime;
+    private String MsgType;
+    private String Content;
 
     public String getToUserName() {
-        return toUserName;
+        return ToUserName;
     }
 
     public void setToUserName(String toUserName) {
-        this.toUserName = toUserName;
+        ToUserName = toUserName;
     }
 
     public String getFromUserName() {
-        return fromUserName;
+        return FromUserName;
     }
 
     public void setFromUserName(String fromUserName) {
-        this.fromUserName = fromUserName;
+        FromUserName = fromUserName;
     }
 
     public Long getCreateTime() {
-        return createTime;
+        return CreateTime;
     }
 
     public void setCreateTime(Long createTime) {
-        this.createTime = createTime;
+        CreateTime = createTime;
     }
 
     public String getMsgType() {
-        return msgType;
+        return MsgType;
     }
 
     public void setMsgType(String msgType) {
-        this.msgType = msgType;
+        MsgType = msgType;
     }
 
     public String getContent() {
-        return content;
+        return Content;
     }
 
     public void setContent(String content) {
-        this.content = content;
+        Content = content;
     }
 }
