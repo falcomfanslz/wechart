@@ -41,7 +41,7 @@ import java.util.Map;
 public class TextMessageServiceImpl implements TextMessageService{
     @Override
     public String getTextMessage(HttpServletRequest httpServletRequest) {
-        TextMessage textMessage = null;
+        TextMessage textMessage = new TextMessage();
 
         Map<String, String> xmlMap = MessageUtil.xmlToMap(httpServletRequest);
 

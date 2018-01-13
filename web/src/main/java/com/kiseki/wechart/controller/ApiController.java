@@ -35,7 +35,7 @@ public class ApiController {
     public String wx(String signature, String timestamp, String nonce, String echostr){
         return echostr;
     }
-    @RequestMapping(value = "", method = RequestMethod.POST, headers = {"content-type=application/xml"})
+    @RequestMapping(value = "", method = RequestMethod.POST)
     public String postWx(HttpServletRequest httpServletRequest){
         return textMessageService.getTextMessage(httpServletRequest);
     }
