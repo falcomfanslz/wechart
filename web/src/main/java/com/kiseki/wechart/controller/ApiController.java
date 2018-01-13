@@ -9,9 +9,6 @@ package com.kiseki.wechart.controller;
 
 import com.kiseki.wechart.model.TextMessage;
 import com.kiseki.wechart.service.TextMessageService;
-import org.omg.CORBA.Request;
-import org.springframework.http.HttpRequest;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;

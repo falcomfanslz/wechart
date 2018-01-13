@@ -40,16 +40,13 @@ public class MessageUtil {
                 map.put(element.getName(), element.getText());
             }
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         } catch (DocumentException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }finally{
             try {
                 in.close();
             } catch (IOException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }

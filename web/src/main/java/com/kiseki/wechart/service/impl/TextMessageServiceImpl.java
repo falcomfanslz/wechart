@@ -8,26 +8,14 @@
 package com.kiseki.wechart.service.impl;
 
 
-import com.alibaba.fastjson.JSONObject;
 import com.kiseki.wechart.model.TextMessage;
 import com.kiseki.wechart.model.TextMessageResponce;
 import com.kiseki.wechart.service.TextMessageService;
 import com.kiseki.wechart.util.MessageUtil;
 import com.thoughtworks.xstream.XStream;
-import org.dom4j.Document;
-import org.dom4j.Element;
-import org.dom4j.io.SAXReader;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Unmarshaller;
-import java.io.InputStream;
-import java.io.StringReader;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
