@@ -1,7 +1,9 @@
 package com.kiseki.wechart.service;
 
-import com.kiseki.wechart.model.TextMessage;
+import org.springframework.http.HttpRequest;
+
+import javax.servlet.http.HttpServletRequest;
 
 public interface TextMessageService {
-    String getTextMessage(TextMessage textMessage);
+    String getTextMessage(HttpServletRequest httpServletRequest);
 }

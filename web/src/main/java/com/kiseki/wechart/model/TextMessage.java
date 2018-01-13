@@ -24,7 +24,9 @@ public class TextMessage {
     private String MsgType;
     private String Content;
     private Long MsgId;
+    public TextMessage(){
 
+    }
     public String getToUserName() {
         return ToUserName;
     }

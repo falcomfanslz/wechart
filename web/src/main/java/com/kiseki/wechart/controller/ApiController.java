@@ -9,12 +9,15 @@ package com.kiseki.wechart.controller;
 
 import com.kiseki.wechart.model.TextMessage;
 import com.kiseki.wechart.service.TextMessageService;
+import org.omg.CORBA.Request;
+import org.springframework.http.HttpRequest;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * <br>
@@ -33,7 +36,7 @@ public class ApiController {
         return echostr;
     }
     @RequestMapping(value = "", method = RequestMethod.POST, headers = {"content-type=application/xml"})
-    public String postWx(@RequestBody TextMessage textMessage){
-        return textMessageService.getTextMessage(textMessage);
+    public String postWx(HttpServletRequest httpServletRequest){
+        return textMessageService.getTextMessage(httpServletRequest);
     }
 }

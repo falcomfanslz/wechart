@@ -23,7 +23,9 @@ public class TextMessageResponce {
     private Long CreateTime;
     private String MsgType;
     private String Content;
+    public TextMessageResponce(){
 
+    }
     public String getToUserName() {
         return ToUserName;
     }
