@@ -7,8 +7,6 @@
  */
 package com.kiseki.wechart.model;
 
-import javax.xml.bind.annotation.XmlRootElement;
-
 /**
  * <br>
  * 〈文本消息〉
@@ -16,48 +14,11 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @create 2018/1/13
  * @since 1.0.0
  */
-@XmlRootElement(name="xml")
-public class TextMessage {
-    private String ToUserName;
-    private String FromUserName;
-    private Long CreateTime;
-    private String MsgType;
+public class TextMessage extends BaseMessage{
+    //文本消息内容
     private String Content;
-    private Long MsgId;
-    public TextMessage(){
-
-    }
-    public String getToUserName() {
-        return ToUserName;
-    }
-
-    public void setToUserName(String toUserName) {
-        ToUserName = toUserName;
-    }
-
-    public String getFromUserName() {
-        return FromUserName;
-    }
-
-    public void setFromUserName(String fromUserName) {
-        FromUserName = fromUserName;
-    }
-
-    public Long getCreateTime() {
-        return CreateTime;
-    }
-
-    public void setCreateTime(Long createTime) {
-        CreateTime = createTime;
-    }
-
-    public String getMsgType() {
-        return MsgType;
-    }
-
-    public void setMsgType(String msgType) {
-        MsgType = msgType;
-    }
+    //消息id，64位整型
+    private String MsgId;
 
     public String getContent() {
         return Content;
@@ -67,11 +28,11 @@ public class TextMessage {
         Content = content;
     }
 
-    public Long getMsgId() {
+    public String getMsgId() {
         return MsgId;
     }
 
-    public void setMsgId(Long msgId) {
+    public void setMsgId(String msgId) {
         MsgId = msgId;
     }
 }
