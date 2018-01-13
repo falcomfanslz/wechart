@@ -20,8 +20,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api")
 public class ApiController {
-    @RequestMapping("/test")
-    public String test(String signature, String timestamp, String nonce, String echostr){
+    @RequestMapping("")
+    public String wx(String signature, String timestamp, String nonce, String echostr){
         return echostr;
     }
 }
