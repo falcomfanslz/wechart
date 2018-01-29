@@ -43,7 +43,7 @@ public class DefaultNormalMessageHandler implements INormalMessageHandler {
 
     private OutputMessage allType(NormalMessage msg) {
         TextOutputMessage out = new TextOutputMessage();
-        out.setContent("你的消息已经收到！" + msg.toString());
+        out.setContent("你的消息已经收到！");
         return out;
     }
 
