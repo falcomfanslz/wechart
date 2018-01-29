@@ -18,6 +18,7 @@ import org.weixin4j.spi.IMessageHandler;
 import javax.annotation.Resource;
 import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
@@ -37,7 +38,9 @@ public class ApiController {
         return echostr;
     }
     @RequestMapping(value = "", method = RequestMethod.POST)
-    public String postWx(HttpServletRequest httpServletRequest) throws IOException, WeixinException {
+    public String postWx(HttpServletRequest httpServletRequest, HttpServletResponse response) throws IOException, WeixinException {
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/xml");
         ServletInputStream in = httpServletRequest.getInputStream();
         IMessageHandler messageHandler = HandlerFactory.getMessageHandler();
         String result = messageHandler.invoke(in);
