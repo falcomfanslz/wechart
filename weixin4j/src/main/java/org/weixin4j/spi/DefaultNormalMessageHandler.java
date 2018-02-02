@@ -19,6 +19,7 @@
  */
 package org.weixin4j.spi;
 
+import org.weixin4j.message.Image;
 import org.weixin4j.message.normal.TextInputMessage;
 import org.weixin4j.message.normal.ImageInputMessage;
 import org.weixin4j.message.normal.LinkInputMessage;
@@ -28,6 +29,7 @@ import org.weixin4j.message.normal.ShortVideoInputMessage;
 import org.weixin4j.message.normal.VideoInputMessage;
 import org.weixin4j.message.normal.VoiceInputMessage;
 import org.weixin4j.message.OutputMessage;
+import org.weixin4j.message.output.ImageOutputMessage;
 import org.weixin4j.message.output.TextOutputMessage;
 
 /**
@@ -60,7 +62,15 @@ public class DefaultNormalMessageHandler implements INormalMessageHandler {
 
     @Override
     public OutputMessage imageTypeMsg(ImageInputMessage msg) {
-        return allType(msg);
+        ImageOutputMessage result = new ImageOutputMessage();
+        Image image = new Image();
+        image.setMediaId(msg.getMediaId());
+        result.setImage(image);
+        result.setCreateTime(System.currentTimeMillis());
+        result.setFromUserName(msg.getToUserName());
+        result.setToUserName(msg.getFromUserName());
+
+        return result;
     }
 
     @Override
