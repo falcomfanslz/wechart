@@ -9,7 +9,7 @@ package org.weixin4j.menu;
 public class ScancodeWaitMsgButton extends SingleButton {
 
     /**
-     * 类型必须.菜单KEY值，用于消息接口推送，不超过128字节
+     ** 类型必须.菜单KEY值，用于消息接口推送，不超过128字节
      */
     private String key;
 
