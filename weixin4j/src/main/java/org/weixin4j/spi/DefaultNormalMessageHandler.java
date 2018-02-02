@@ -62,15 +62,18 @@ public class DefaultNormalMessageHandler implements INormalMessageHandler {
 
     @Override
     public OutputMessage imageTypeMsg(ImageInputMessage msg) {
-        ImageOutputMessage result = new ImageOutputMessage();
-        Image image = new Image();
-        image.setMediaId(msg.getMediaId());
-        result.setImage(image);
-        result.setCreateTime(System.currentTimeMillis());
-        result.setFromUserName(msg.getToUserName());
-        result.setToUserName(msg.getFromUserName());
+//        ImageOutputMessage result = new ImageOutputMessage();
+//        Image image = new Image();
+//        image.setMediaId(msg.getMediaId());
+//        result.setImage(image);
+//        result.setCreateTime(System.currentTimeMillis());
+//        result.setFromUserName(msg.getToUserName());
+//        result.setToUserName(msg.getFromUserName());
+        TextOutputMessage out = new TextOutputMessage();
+        out.setContent(msg.getPicUrl());
 
-        return result;
+
+        return out;
     }
 
     @Override
